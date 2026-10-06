@@ -116,7 +116,7 @@ public sealed class BackstagePassItemTests
         items.Add(item);
 
         var expectedSellIn = initialSellIn - 1;
-        const int expectedQuality = 0;
+        var expectedQuality = 0;
 
         // Act
         sut.UpdateQuality();
@@ -147,7 +147,7 @@ public sealed class BackstagePassItemTests
         items.Add(item);
 
         var expectedSellIn = initialSellIn - 1;
-        const int expectedQuality = 50;
+        var expectedQuality = 50;
 
         // Act
         sut.UpdateQuality();
@@ -180,7 +180,7 @@ public sealed class BackstagePassItemTests
         items.Add(item);
 
         var expectedSellIn = initialSellIn - 1;
-        const int expectedQuality = 50;
+        var expectedQuality = 50;
 
         // Act
         sut.UpdateQuality();

@@ -87,7 +87,7 @@ public sealed class AgedBrieItemTests
         items.Add(item);
 
         var expectedSellIn = initialSellIn - 1;
-        const int expectedQuality = 50;
+        var expectedQuality = 50;
 
         // Act
         sut.UpdateQuality();
@@ -114,7 +114,7 @@ public sealed class AgedBrieItemTests
         items.Add(item);
 
         var expectedSellIn = item.SellIn - 1;
-        const int expectedQuality = 50;
+        var expectedQuality = 50;
 
         // Act
         sut.UpdateQuality();
@@ -141,7 +141,7 @@ public sealed class AgedBrieItemTests
         items.Add(item);
 
         var expectedSellIn = item.SellIn - 1;
-        const int expectedQuality = 50;
+        var expectedQuality = 50;
 
         // Act
         sut.UpdateQuality();
@@ -168,7 +168,7 @@ public sealed class AgedBrieItemTests
         items.Add(item);
 
         var expectedSellIn = item.SellIn - 1;
-        const int expectedQuality = 50;
+        var expectedQuality = 50;
 
         // Act
         sut.UpdateQuality();
