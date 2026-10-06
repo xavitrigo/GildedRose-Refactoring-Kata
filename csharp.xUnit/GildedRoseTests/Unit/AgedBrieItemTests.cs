@@ -4,7 +4,7 @@ using Xunit;
 
 namespace GildedRoseTests.Unit;
 
-public sealed class AgedBrieTests
+public sealed class AgedBrieItemTests
 {
     [Theory]
     [InlineData(10, 20)]
