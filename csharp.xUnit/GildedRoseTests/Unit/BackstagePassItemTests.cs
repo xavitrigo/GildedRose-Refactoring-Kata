@@ -4,7 +4,7 @@ using Xunit;
 
 namespace GildedRoseTests.Unit;
 
-public sealed class BackstagePassTests
+public sealed class BackstagePassItemTests
 {
     [Theory]
     [InlineData(15, 20)]
