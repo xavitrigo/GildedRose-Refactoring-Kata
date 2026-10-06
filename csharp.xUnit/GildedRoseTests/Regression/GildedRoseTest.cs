@@ -1,8 +1,8 @@
-﻿using Xunit;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GildedRoseKata;
+using Xunit;
 
-namespace GildedRoseTests;
+namespace GildedRoseTests.Regression;
 
 public class GildedRoseTest
 {
