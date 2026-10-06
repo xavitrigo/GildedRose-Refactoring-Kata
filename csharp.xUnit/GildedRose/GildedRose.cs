@@ -68,6 +68,14 @@ public class GildedRose
                             if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                             {
                                 Items[i].Quality = Items[i].Quality - 1;
+                                
+                                if (Items[i].Name == "Conjured Mana Cake")
+                                {
+                                    if (Items[i].Quality > 0)
+                                    {
+                                        Items[i].Quality = Items[i].Quality - 1;
+                                    }
+                                }
                             }
                         }
                     }
