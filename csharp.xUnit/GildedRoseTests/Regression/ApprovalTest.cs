@@ -9,7 +9,7 @@ using VerifyXunit;
 
 using Xunit;
 
-namespace GildedRoseTests;
+namespace GildedRoseTests.Regression;
 
 public class ApprovalTest
 {
