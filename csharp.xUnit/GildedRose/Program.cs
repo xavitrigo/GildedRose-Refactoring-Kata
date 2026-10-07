@@ -1,6 +1,8 @@
 ﻿using System;
 using GildedRoseKata.Factory.Implementation;
 using GildedRoseKata.Formatter.Implementation;
+using GildedRoseKata.Output.Implementation;
+using GildedRoseKata.Report.Implementation;
 
 namespace GildedRoseKata;
 
@@ -14,16 +16,11 @@ public class Program
         var days = args.Length > 0 ? int.Parse(args[0]) + 1 : 2;
         
         var formatter = new CommaSeparatedFormatter(); 
+        var reportGenerator = new InventoryReportGenerator(app, items, formatter);
+        var outputWriter = new ConsoleOutputWriter();
 
-        Console.WriteLine("OMGHAI!");
-        
-        for (var day = 0; day < days; day++)
-        {
-            var dayReport = formatter.FormatDay(day, items);
-            
-            Console.Write(dayReport);
-        
-            app.UpdateQuality();
-        }
+        var report = reportGenerator.Generate(days);
+
+        outputWriter.Write(report);
     }
 }
