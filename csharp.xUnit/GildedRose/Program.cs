@@ -1,5 +1,6 @@
 ﻿using System;
 using GildedRoseKata.Factory.Implementation;
+using GildedRoseKata.Formatter.Implementation;
 
 namespace GildedRoseKata;
 
@@ -7,30 +8,21 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("OMGHAI!");
-
         var items = new DefaultInventoryFactory()?.Create();
         var app = new GildedRose(items);
 
-        var days = 2;
+        var days = args.Length > 0 ? int.Parse(args[0]) + 1 : 2;
+        
+        var formatter = new CommaSeparatedFormatter(); 
 
-        if (args.Length > 0)
-        {
-            days = int.Parse(args[0]) + 1;
-        }
-
+        Console.WriteLine("OMGHAI!");
+        
         for (var day = 0; day < days; day++)
         {
-            Console.WriteLine("-------- day " + day + " --------");
-            Console.WriteLine("name, sellIn, quality");
-
-            foreach (var item in items)
-            {
-                Console.WriteLine(item.Name + ", " + item.SellIn + ", " + item.Quality);
-            }
-
-            Console.WriteLine("");
-
+            var dayReport = formatter.FormatDay(day, items);
+            
+            Console.Write(dayReport);
+        
             app.UpdateQuality();
         }
     }
