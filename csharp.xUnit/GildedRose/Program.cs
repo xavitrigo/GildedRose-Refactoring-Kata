@@ -1,5 +1,4 @@
-﻿using System;
-using GildedRoseKata.Factory.Implementation;
+﻿using GildedRoseKata.Factory.Implementation;
 using GildedRoseKata.Formatter.Implementation;
 using GildedRoseKata.Output.Implementation;
 using GildedRoseKata.Report.Implementation;
